@@ -214,7 +214,7 @@ function generateQuote() {
             }, 2000);
 
         }
-    } else {
+    } else if (pluralBtn.classList.contains('selected')) {
         if (numberInput.value == 1) {
             quoteItem.innerHTML = `${plural.sentenceA[aP]}`;
         } else if (numberInput.value == 2) {
@@ -236,5 +236,14 @@ function generateQuote() {
             }, 2000);
 
         }
+    } else {
+        const alert = document.createElement('div');
+        alert.classList.add('alert', 'alert-danger');
+        alert.textContent = 'Please Select Type Of Quote';
+        alertDiv.appendChild(alert);
+
+        setTimeout(function () {
+            alertDiv.innerHTML = '';
+        }, 2000);
     }
 }
