@@ -1,5 +1,5 @@
 # LIVE LINK TO WEBSITE:
-## https://nifty-ardinghelli-9bd90b.netlify.com/
+## https://mystifying-varahamihira-4c3e4a.netlify.com/
 
 #LINK TO GITHUB REPOSITORY
-## https://github.com/marcoazzurrini/OCR-5_quote_generator_s1
+## https://github.com/marcoazzurrini/OCR-5_quote_generator_s2
