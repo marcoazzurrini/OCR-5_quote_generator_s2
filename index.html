@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Quote Generator - Step 2</title>
+</head>
+
+<body>
+    <div class="container d-flex flex-column justify-content-center">
+
+        <header>
+            <h1 class="display-3 text-center mb-4">Random Quotes Generator</h1>
+            <p class="lead text-center">Step 2</p>
+        </header>
+
+        <main>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="form-group">
+                        <label for="numberInput"><small>How many sentences in your quotes? (between 1 &
+                                5)</small></label>
+                        <input type="number" id="numberInput" class="form-control" min="1" max="5">
+                    </div>
+
+                    <p class="lead">What kind of quote do you want?</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <button id="singular" class="btn btn-success btn-block">Singular</button>
+                        </div>
+                        <div class="col-6">
+                            <button id="plural" class="btn btn-warning btn-block">Plural</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <h3 class="text-center py-4">Here`s Your Quote, Buddy:</h3>
+                    <div id="alertDiv"></div>
+                    <ul class="list-group" id="quoteList">
+                        <li id="quoteItem" class="list-group-item text-center"></li>
+                    </ul>
+                    <button id="generateBtn" class="btn btn-primary text-center btn-block my-3">Generate Quote</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
