@@ -24,7 +24,7 @@
 
         <main>
             <div class="row">
-                <div class="col-md-6 mx-auto">
+                <div class="col-md-8 mx-auto">
                     <div class="form-group">
                         <label for="numberInput"><small>How many sentences in your quotes? (between 1 &
                                 5)</small></label>
@@ -45,11 +45,37 @@
             </div>
 
             <div class="row">
-                <div class="col-md-6 mx-auto">
+                <div class="col-md-8 mx-auto">
                     <h3 class="text-center py-4">Here`s Your Quote, Buddy:</h3>
                     <div id="alertDiv"></div>
                     <ul class="list-group" id="quoteList">
-                        <li id="quoteItem" class="list-group-item text-center"></li>
+                        <div class="row">
+                            <div class="col-2 px-0">
+                                <li id="quoteItem-1"
+                                    class="list-group-item justify-content-center d-flex align-items-center"></li>
+                            </div>
+                            <div class="col-3 px-0">
+                                <li id="quoteItem-2"
+                                    class="list-group-item justify-content-center d-flex align-items-center"></li>
+                            </div>
+                            <div class="col-3 px-0">
+                                <li id="quoteItem-3"
+                                    class="list-group-item justify-content-center d-flex align-items-center"></li>
+                            </div>
+                            <div class="col-2 px-0">
+                                <li id="quoteItem-4"
+                                    class="list-group-item justify-content-center d-flex align-items-center"></li>
+                            </div>
+                            <div class="col-2 px-0">
+                                <li id="quoteItem-5"
+                                    class="list-group-item justify-content-center d-flex align-items-center"></li>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <li id="quoteItem" class="list-group-item text-center mt-3"></li>
+                            </div>
+                        </div>
                     </ul>
                     <button id="generateBtn" class="btn btn-primary text-center btn-block my-3">Generate Quote</button>
                 </div>

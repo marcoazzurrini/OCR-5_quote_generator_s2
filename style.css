@@ -2,6 +2,14 @@
     height: 100vh;
 }
 
+#quoteItem-1, 
+#quoteItem-2, 
+#quoteItem-3, 
+#quoteItem-4, 
+#quoteItem-5 {
+    height: 100%;
+}
+
 @media(max-width: 600px) {
     h1 {
         font-size: 30px !important;

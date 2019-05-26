@@ -16,10 +16,10 @@ const plural = {
     sentenceB: [
         'are',
         'are going to',
-        'are like a',
+        'are like',
         'will do',
         'fell down from',
-        'energise like a',
+        'energise like',
         'will be',
         'have done',
         'drive to',
@@ -29,7 +29,7 @@ const plural = {
     sentenceC: [
         'Mars',
         'Pistacchios',
-        'lorem Ipsum',
+        'Cigarettes',
         'credit cards',
         'the kings',
         'French',
@@ -135,11 +135,17 @@ const singular = {
 // GET UI VARS
 const quoteList = document.getElementById('quoteList');
 const generateBtn = document.getElementById('generateBtn');
-const quoteItem = document.getElementById('quoteItem');
 const numberInput = document.getElementById('numberInput');
 const alertDiv = document.getElementById('alertDiv');
 const singularBtn = document.getElementById('singular');
 const pluralBtn = document.getElementById('plural');
+
+const quoteItem1 = document.getElementById('quoteItem-1');
+const quoteItem2 = document.getElementById('quoteItem-2');
+const quoteItem3 = document.getElementById('quoteItem-3');
+const quoteItem4 = document.getElementById('quoteItem-4');
+const quoteItem5 = document.getElementById('quoteItem-5');
+const quoteItem = document.getElementById('quoteItem');
 
 
 
@@ -194,15 +200,25 @@ function generateQuote() {
 
     if (singularBtn.classList.contains('selected')) {
         if (numberInput.value == 1) {
-            quoteItem.innerHTML = `${singular.sentenceA[aS]}`;
+            quoteItem1.innerHTML = `${singular.sentenceA[aS]}`;
         } else if (numberInput.value == 2) {
-            quoteItem.innerHTML = `${singular.sentenceA[aS]} ${singular.sentenceB[bS]}`;
+            quoteItem1.innerHTML = `${singular.sentenceA[aS]}`;
+            quoteItem2.innerHTML = `${singular.sentenceB[bS]}`;
         } else if (numberInput.value == 3) {
-            quoteItem.innerHTML = `${singular.sentenceA[aS]} ${singular.sentenceB[bS]} ${singular.sentenceC[cS]}`;
+            quoteItem1.innerHTML = `${singular.sentenceA[aS]}`;
+            quoteItem2.innerHTML = `${singular.sentenceB[bS]}`;
+            quoteItem3.innerHTML = `${singular.sentenceC[cS]}`;
         } else if (numberInput.value == 4) {
-            quoteItem.innerHTML = `${singular.sentenceA[aS]} ${singular.sentenceB[bS]} ${singular.sentenceC[cS]} ${singular.sentenceD[cS]}`;
+            quoteItem1.innerHTML = `${singular.sentenceA[aS]}`;
+            quoteItem2.innerHTML = `${singular.sentenceB[bS]}`;
+            quoteItem3.innerHTML = `${singular.sentenceC[cS]}`;
+            quoteItem4.innerHTML = `${singular.sentenceD[dS]}`;
         } else if (numberInput.value == 5) {
-            quoteItem.innerHTML = `${singular.sentenceA[aS]} ${singular.sentenceB[bS]} ${singular.sentenceC[cS]} ${singular.sentenceD[dS]} ${singular.sentenceE[eS]}`;
+            quoteItem1.innerHTML = `${singular.sentenceA[aS]}`;
+            quoteItem2.innerHTML = `${singular.sentenceB[bS]}`;
+            quoteItem3.innerHTML = `${singular.sentenceC[cS]}`;
+            quoteItem4.innerHTML = `${singular.sentenceD[dS]}`;
+            quoteItem5.innerHTML = `${singular.sentenceE[eS]}`;
         } else {
             const alert = document.createElement('div');
             alert.classList.add('alert', 'alert-danger');
@@ -214,17 +230,30 @@ function generateQuote() {
             }, 2000);
 
         }
+
+
+
     } else if (pluralBtn.classList.contains('selected')) {
         if (numberInput.value == 1) {
-            quoteItem.innerHTML = `${plural.sentenceA[aP]}`;
+            quoteItem1.innerHTML = `${plural.sentenceA[aP]}`;
         } else if (numberInput.value == 2) {
-            quoteItem.innerHTML = `${plural.sentenceA[aP]} ${plural.sentenceB[bP]}`;
+            quoteItem1.innerHTML = `${plural.sentenceA[aP]}`;
+            quoteItem2.innerHTML = `${plural.sentenceB[bP]}`;
         } else if (numberInput.value == 3) {
-            quoteItem.innerHTML = `${plural.sentenceA[aP]} ${plural.sentenceB[bP]} ${plural.sentenceC[cP]}`;
+            quoteItem1.innerHTML = `${plural.sentenceA[aP]}`;
+            quoteItem2.innerHTML = `${plural.sentenceB[bP]}`;
+            quoteItem3.innerHTML = `${plural.sentenceC[cP]}`;
         } else if (numberInput.value == 4) {
-            quoteItem.innerHTML = `${plural.sentenceA[aP]} ${plural.sentenceB[bP]} ${plural.sentenceC[cP]} ${plural.sentenceD[cP]}`;
+            quoteItem1.innerHTML = `${plural.sentenceA[aP]}`;
+            quoteItem2.innerHTML = `${plural.sentenceB[bP]}`;
+            quoteItem3.innerHTML = `${plural.sentenceC[cP]}`;
+            quoteItem4.innerHTML = `${plural.sentenceD[dP]}`;
         } else if (numberInput.value == 5) {
-            quoteItem.innerHTML = `${plural.sentenceA[aP]} ${plural.sentenceB[bP]} ${plural.sentenceC[cP]} ${plural.sentenceD[dP]} ${plural.sentenceE[eP]}`;
+            quoteItem1.innerHTML = `${plural.sentenceA[aP]}`;
+            quoteItem2.innerHTML = `${plural.sentenceB[bP]}`;
+            quoteItem3.innerHTML = `${plural.sentenceC[cP]}`;
+            quoteItem4.innerHTML = `${plural.sentenceD[dP]}`;
+            quoteItem5.innerHTML = `${plural.sentenceE[eP]}`;
         } else {
             const alert = document.createElement('div');
             alert.classList.add('alert', 'alert-danger');
@@ -246,4 +275,7 @@ function generateQuote() {
             alertDiv.innerHTML = '';
         }, 2000);
     }
+
+    console.log(quoteItem2.textContent);
+    quoteItem.innerHTML = `${quoteItem1.textContent} ${quoteItem2.textContent} ${quoteItem3.textContent} ${quoteItem4.textContent} ${quoteItem5.textContent}`;
 }
