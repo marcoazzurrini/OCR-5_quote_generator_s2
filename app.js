@@ -1,135 +1,31 @@
 // SENTENCES ARRAYS
 const plural = {
     sentenceA: [
-        'Mens',
-        'Women',
-        'Some Girls',
-        'Monkeys',
-        'Lots of Walls',
-        'Some Horses',
-        'The Stars',
-        'Plenty Lighters',
-        'Many Computers',
-        'Lots of Smartphones'
-    ],
-
-    sentenceB: [
-        'are',
-        'are going to',
-        'are like',
-        'will do',
-        'fell down from',
-        'energise like',
-        'will be',
-        'have done',
-        'drive to',
-        'are from'
-    ],
-
-    sentenceC: [
-        'Mars',
-        'Pistacchios',
-        'Cigarettes',
-        'credit cards',
-        'the kings',
-        'French',
-        'Italians',
-        'Donkeys',
-        'the universes',
-        'Birds'
-    ],
-
-    sentenceD: [
-        'building',
-        'cutting',
-        'running',
-        'coding',
-        'erasing',
-        'managing',
-        'eating',
-        'travelling to',
-        'flying over',
-        'burning'
-    ],
-
-    sentenceE: [
-        'breakfast',
-        'lunch',
-        'dinner',
-        'presidents',
-        'musicians',
-        'people',
-        'bits',
-        'aeroplanes',
-        'rappers',
-        'swords'
+        'Mens are going to play football',
+        'Women are going to see a movie',
+        'Some Girls like shopping',
+        'Monkeys like to scratch their backs with sticks',
+        'Lots of Walls are pretty hard',
+        'Some Horses are black and some are not',
+        'Stars shine in the night sky',
+        'Plenty Lighters will burn plenty cigarettes',
+        'Many Computers form the internet',
+        'Lots of Smartphones in the world are polluting the enviroment'
     ]
 }
 
 const singular = {
     sentenceA: [
-        'A man',
-        'A woman',
-        'The Charger',
-        'A Donkey',
-        'The wall',
-        'A fish',
-        'The moon',
-        'The sun',
-        'A telephone pole',
-        'A television'
-    ],
-
-    sentenceB: [
-        'is',
-        'is going to',
-        'is like',
-        'will do',
-        'fell down from',
-        'energise like',
-        'will be',
-        'done',
-        'drive to',
-        'is from'
-    ],
-
-    sentenceC: [
-        'a planet',
-        'a Pistacchio',
-        'a statue',
-        'a bank',
-        'a queen',
-        'France',
-        'Italy',
-        'a Donkey',
-        'the universe',
-        'Bird'
-    ],
-
-    sentenceD: [
-        'building',
-        'cutting',
-        'running',
-        'coding',
-        'erasing',
-        'managing',
-        'eating',
-        'travelling to',
-        'flying over',
-        'burning'
-    ],
-
-    sentenceE: [
-        'a breakfast',
-        'a lunch',
-        'a dinner',
-        'a president',
-        'a musician',
-        'a person',
-        'a bit',
-        'an aeroplane',
-        'a rapper',
-        'a sword'
+        'A man is going to play football',
+        'A woman is going to watch a movie',
+        'The Charger is charging my new phone',
+        'A Donkey is kinda like an horse, but not really',
+        'The wall is pretty hard',
+        'A fish is swimming upstream in the river',
+        'The moon is shining in this night sky',
+        'The sun is hotter in summer than in winter',
+        'A telephone pole is trying to reach the sky',
+        'A television has fallen from a garbage truck'
     ]
 }
 // GET UI VARS
@@ -172,53 +68,52 @@ function pluralQuote() {
 // GENERATE QUOTE FUNCTION
 function generateQuote() {
 
+    // CLEAN QUOTE FIELD BEFORE INSERTING NEW ONE
+    quoteItem1.innerHTML = '';
+    quoteItem2.innerHTML = '';
+    quoteItem3.innerHTML = '';
+    quoteItem4.innerHTML = '';
+    quoteItem5.innerHTML = '';
+
     // GENERATE RANDOM NUMBER BASED ON LENGTH OF EACH ARRAY
     // TO CALL ARRAY FOR ITEM
     sentenceALength = singular.sentenceA.length;
-    sentenceBLength = singular.sentenceB.length;
-    sentenceCLength = singular.sentenceC.length;
-    sentenceDLength = singular.sentenceD.length;
-    sentenceELength = singular.sentenceE.length;
-
-    sentenceALength = plural.sentenceA.length;
-    sentenceBLength = plural.sentenceB.length;
-    sentenceCLength = plural.sentenceC.length;
-    sentenceDLength = plural.sentenceD.length;
-    sentenceELength = plural.sentenceE.length;
 
     const aS = Math.floor(Math.random() * sentenceALength);
-    const bS = Math.floor(Math.random() * sentenceBLength);
-    const cS = Math.floor(Math.random() * sentenceCLength);
-    const dS = Math.floor(Math.random() * sentenceDLength);
-    const eS = Math.floor(Math.random() * sentenceELength);
+    const bS = Math.floor(Math.random() * sentenceALength);
+    const cS = Math.floor(Math.random() * sentenceALength);
+    const dS = Math.floor(Math.random() * sentenceALength);
+    const eS = Math.floor(Math.random() * sentenceALength);
 
     const aP = Math.floor(Math.random() * sentenceALength);
-    const bP = Math.floor(Math.random() * sentenceBLength);
-    const cP = Math.floor(Math.random() * sentenceCLength);
-    const dP = Math.floor(Math.random() * sentenceDLength);
-    const eP = Math.floor(Math.random() * sentenceELength);
+    const bP = Math.floor(Math.random() * sentenceALength);
+    const cP = Math.floor(Math.random() * sentenceALength);
+    const dP = Math.floor(Math.random() * sentenceALength);
+    const eP = Math.floor(Math.random() * sentenceALength);
+
+
 
     if (singularBtn.classList.contains('selected')) {
         if (numberInput.value == 1) {
             quoteItem1.innerHTML = `${singular.sentenceA[aS]}`;
         } else if (numberInput.value == 2) {
             quoteItem1.innerHTML = `${singular.sentenceA[aS]}`;
-            quoteItem2.innerHTML = `${singular.sentenceB[bS]}`;
+            quoteItem2.innerHTML = `${singular.sentenceA[bS]}`;
         } else if (numberInput.value == 3) {
             quoteItem1.innerHTML = `${singular.sentenceA[aS]}`;
-            quoteItem2.innerHTML = `${singular.sentenceB[bS]}`;
-            quoteItem3.innerHTML = `${singular.sentenceC[cS]}`;
+            quoteItem2.innerHTML = `${singular.sentenceA[bS]}`;
+            quoteItem3.innerHTML = `${singular.sentenceA[cS]}`;
         } else if (numberInput.value == 4) {
             quoteItem1.innerHTML = `${singular.sentenceA[aS]}`;
-            quoteItem2.innerHTML = `${singular.sentenceB[bS]}`;
-            quoteItem3.innerHTML = `${singular.sentenceC[cS]}`;
-            quoteItem4.innerHTML = `${singular.sentenceD[dS]}`;
+            quoteItem2.innerHTML = `${singular.sentenceA[bS]}`;
+            quoteItem3.innerHTML = `${singular.sentenceA[cS]}`;
+            quoteItem4.innerHTML = `${singular.sentenceA[dS]}`;
         } else if (numberInput.value == 5) {
             quoteItem1.innerHTML = `${singular.sentenceA[aS]}`;
-            quoteItem2.innerHTML = `${singular.sentenceB[bS]}`;
-            quoteItem3.innerHTML = `${singular.sentenceC[cS]}`;
-            quoteItem4.innerHTML = `${singular.sentenceD[dS]}`;
-            quoteItem5.innerHTML = `${singular.sentenceE[eS]}`;
+            quoteItem2.innerHTML = `${singular.sentenceA[bS]}`;
+            quoteItem3.innerHTML = `${singular.sentenceA[cS]}`;
+            quoteItem4.innerHTML = `${singular.sentenceA[dS]}`;
+            quoteItem5.innerHTML = `${singular.sentenceA[eS]}`;
         } else {
             const alert = document.createElement('div');
             alert.classList.add('alert', 'alert-danger');
@@ -238,22 +133,22 @@ function generateQuote() {
             quoteItem1.innerHTML = `${plural.sentenceA[aP]}`;
         } else if (numberInput.value == 2) {
             quoteItem1.innerHTML = `${plural.sentenceA[aP]}`;
-            quoteItem2.innerHTML = `${plural.sentenceB[bP]}`;
+            quoteItem2.innerHTML = `${plural.sentenceA[bP]}`;
         } else if (numberInput.value == 3) {
             quoteItem1.innerHTML = `${plural.sentenceA[aP]}`;
-            quoteItem2.innerHTML = `${plural.sentenceB[bP]}`;
-            quoteItem3.innerHTML = `${plural.sentenceC[cP]}`;
+            quoteItem2.innerHTML = `${plural.sentenceA[bP]}`;
+            quoteItem3.innerHTML = `${plural.sentenceA[cP]}`;
         } else if (numberInput.value == 4) {
             quoteItem1.innerHTML = `${plural.sentenceA[aP]}`;
-            quoteItem2.innerHTML = `${plural.sentenceB[bP]}`;
-            quoteItem3.innerHTML = `${plural.sentenceC[cP]}`;
-            quoteItem4.innerHTML = `${plural.sentenceD[dP]}`;
+            quoteItem2.innerHTML = `${plural.sentenceA[bP]}`;
+            quoteItem3.innerHTML = `${plural.sentenceA[cP]}`;
+            quoteItem4.innerHTML = `${plural.sentenceA[dP]}`;
         } else if (numberInput.value == 5) {
             quoteItem1.innerHTML = `${plural.sentenceA[aP]}`;
-            quoteItem2.innerHTML = `${plural.sentenceB[bP]}`;
-            quoteItem3.innerHTML = `${plural.sentenceC[cP]}`;
-            quoteItem4.innerHTML = `${plural.sentenceD[dP]}`;
-            quoteItem5.innerHTML = `${plural.sentenceE[eP]}`;
+            quoteItem2.innerHTML = `${plural.sentenceA[bP]}`;
+            quoteItem3.innerHTML = `${plural.sentenceA[cP]}`;
+            quoteItem4.innerHTML = `${plural.sentenceA[dP]}`;
+            quoteItem5.innerHTML = `${plural.sentenceA[eP]}`;
         } else {
             const alert = document.createElement('div');
             alert.classList.add('alert', 'alert-danger');
@@ -276,6 +171,5 @@ function generateQuote() {
         }, 2000);
     }
 
-    console.log(quoteItem2.textContent);
     quoteItem.innerHTML = `${quoteItem1.textContent} ${quoteItem2.textContent} ${quoteItem3.textContent} ${quoteItem4.textContent} ${quoteItem5.textContent}`;
 }
