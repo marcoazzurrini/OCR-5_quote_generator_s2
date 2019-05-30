@@ -1,31 +1,31 @@
 // SENTENCES ARRAYS
 const plural = {
     sentenceA: [
-        'Mens are going to play football',
-        'Women are going to see a movie',
-        'Some Girls like shopping',
-        'Monkeys like to scratch their backs with sticks',
-        'Lots of Walls are pretty hard',
-        'Some Horses are black and some are not',
-        'Stars shine in the night sky',
-        'Plenty Lighters will burn plenty cigarettes',
-        'Many Computers form the internet',
-        'Lots of Smartphones in the world are polluting the enviroment'
+        'm are going to play football',
+        'women are going to see a movie',
+        'some Girls like shopping',
+        'monkeys like to scratch their backs with sticks',
+        'lots of Walls are pretty hard',
+        'some Horses are black and some are not',
+        'stars shine in the night sky',
+        'plenty Lighters will burn plenty cigarettes',
+        'many Computers form the internet',
+        'lots of Smartphones in the world are polluting the enviroment'
     ]
 }
 
 const singular = {
     sentenceA: [
-        'A man is going to play football',
-        'A woman is going to watch a movie',
-        'The Charger is charging my new phone',
-        'A Donkey is kinda like an horse, but not really',
-        'The wall is pretty hard',
-        'A fish is swimming upstream in the river',
-        'The moon is shining in this night sky',
-        'The sun is hotter in summer than in winter',
-        'A telephone pole is trying to reach the sky',
-        'A television has fallen from a garbage truck'
+        'a man is going to play football',
+        'a woman is going to watch a movie',
+        'the Charger is charging my new phone',
+        'a Donkey is kinda like an horse, but not really',
+        'the wall is pretty hard',
+        'a fish is swimming upstream in the river',
+        'the moon is shining in this night sky',
+        'the sun is hotter in summer than in winter',
+        'a telephone pole is trying to reach the sky',
+        'a television has fallen from a garbage truck'
     ]
 }
 // GET UI VARS
